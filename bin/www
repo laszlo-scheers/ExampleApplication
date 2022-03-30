@@ -67,7 +67,7 @@ function onListening() {
 var fs = require('fs');
 var https = require('https');
 var port = normalizePort(process.env.PORT || '8080');
-var https_port    =   process.env.PORT_HTTPS || 3223; 
+var https_port    =   process.env.PORT_HTTPS || 8443; 
 var options = {}
 
 if(process.env.ENV !== "DEV") {
