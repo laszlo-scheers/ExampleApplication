@@ -27,6 +27,6 @@ echo $SERVER > server.crt
 # Add the private the private key to the node_app  docker container
 docker cp ./privatekey.pem node_app:/privatekey.pem
 # Add the server key to the node_app docker container
-docker co ./server.crt node_app:/server.crt
+docker cp ./server.crt node_app:/server.crt
 # Starts the node_app container
 docker start $CONTAINER_NAME
