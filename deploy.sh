@@ -20,7 +20,7 @@ then
 fi
 
 # Create a container called node_app that is available on port 8448 from our docker image
-docker create -p 8448:8448 --name $CONTAINER_NAME $IMAGE_NAME
+docker create -p 443:443 --name $CONTAINER_NAME $IMAGE_NAME
 # Write the private key to a file
 echo $PRIVATE_KEY > privatekey.pem
 # Write the server key to a file

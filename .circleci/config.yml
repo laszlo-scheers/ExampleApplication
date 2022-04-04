@@ -54,7 +54,7 @@ jobs:
           command: echo $SERVER > server.crt && echo $PRIVATE_KEY > privatekey.pem
       - run:
           name: build-docker-image-for-integration-environment
-          command: docker create -p 8448:8448 --name integration_app $IMAGE_NAME
+          command: docker create -p 443:443 --name integration_app $IMAGE_NAME
       - run:
           name: copy-server-cert-and-private-key-accross
           command: docker cp ./privatekey.pem integration_app:/private.pem; docker cp ./server.crt integration_app:/server.crt
